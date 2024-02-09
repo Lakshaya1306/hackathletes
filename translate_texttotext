@@ -1,0 +1,88 @@
+pip install translate
+pip install googletrans==4.0.0-rc1
+from googletrans import Translator
+from langdetect import detect
+
+# Function to get user input for target language
+def get_target_language():
+    print("Select a target language for translation:")
+    print("1. Spanish")
+    print("2. French")
+    print("3. German")
+    print("4. Italian")
+    print("5. Portuguese")
+    print("6. Dutch")
+    print("7. Russian")
+    print("8. Chinese (Simplified)")
+    print("9. Chinese (Traditional)")
+    print("10. Japanese")
+    print("11. Korean")
+    print("12. Arabic")
+    print("13. Hindi")
+    print("14. Bengali")
+    print("15. Urdu")
+    print("16. Turkish")
+    print("17. Greek")
+    print("18. Thai")
+    print("19. Vietnamese")
+    print("20. Polish")
+    print("21. Swedish")
+    print("22. Danish")
+    print("23. Norwegian")
+    print("24. Finnish")
+    print("25. Hungarian")
+    # Add more languages here...
+    
+    choice = input("Enter the number corresponding to your choice: ")
+    
+    languages = {
+        "1": "es",
+        "2": "fr",
+        "3": "de",
+        "4": "it",
+        "5": "pt",
+        "6": "nl",
+        "7": "ru",
+        "8": "zh-cn",
+        "9": "zh-tw",
+        "10": "ja",
+        "11": "ko",
+        "12": "ar",
+        "13": "hi",
+        "14": "bn",
+        "15": "ur",
+        "16": "tr",
+        "17": "el",
+        "18": "th",
+        "19": "vi",
+        "20": "pl",
+        "21": "sv",
+        "22": "da",
+        "23": "no",
+        "24": "fi",
+        "25": "hu",
+        # Add more language codes here...
+    }
+    
+    return languages.get(choice, "es")  # Default to Spanish if choice is invalid
+
+# Initialize translator
+target_language = get_target_language()
+
+# Prompt user to enter the text to be translated
+text = input("Enter the text to be translated: ")
+
+# Detect input language
+input_language = detect(text)
+
+# Translate only if input language is detected
+if input_language != 'en':
+    translator = Translator()
+    translated = translator.translate(text, dest=target_language)
+    translation = translated.text
+else:
+    translation = text  # No need to translate if input language is English
+
+# Print the translated text
+print("Original text:", text)
+print("Translated text:", translation)
