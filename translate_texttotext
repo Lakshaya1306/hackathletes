@@ -1,6 +1,6 @@
 pip install translate
 pip install googletrans==4.0.0-rc1
-
+pip install langdetect
 from googletrans import Translator
 from langdetect import detect
 
