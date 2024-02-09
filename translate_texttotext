@@ -1,5 +1,6 @@
 pip install translate
 pip install googletrans==4.0.0-rc1
+
 from googletrans import Translator
 from langdetect import detect
 
@@ -80,9 +81,13 @@ if input_language != 'en':
     translator = Translator()
     translated = translator.translate(text, dest=target_language)
     translation = translated.text
+    pronunciation = translated.pronunciation  # Get pronunciation guide
 else:
     translation = text  # No need to translate if input language is English
-
+    pronunciation = ""  # No pronunciation guide for English text
 # Print the translated text
 print("Original text:", text)
 print("Translated text:", translation)
+print("Pronunciation guide:", pronunciation)
+
+  
