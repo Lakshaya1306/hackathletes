@@ -1,0 +1,100 @@
+pip install langdetect
+pip install gtts
+pip install googletrans
+pip install googletrans==4.0.0-rc1
+
+from googletrans import Translator
+from langdetect import detect
+from gtts import gTTS
+import IPython.display as ipd
+
+# Function to get user input for target language
+def get_target_language():
+    print("Select a target language for translation:")
+    print("1. Spanish")
+    print("2. French")
+    print("3. German")
+    print("4. Italian")
+    print("5. Portuguese")
+    print("6. Dutch")
+    print("7. Russian")
+    print("8. Japanese")
+    print("9. Chinese")
+    print("10. Korean")
+    print("11. Arabic")
+    print("12. Turkish")
+    print("13. Hindi")
+    print("14. Bengali")
+    print("15. Urdu")
+    print("16. Indonesian")
+    print("17. Thai")
+    print("18. Vietnamese")
+    print("19. Greek")
+    print("20. Polish")
+    print("21. Romanian")
+    print("22. Swedish")
+    print("23. Czech")
+    print("24. Hungarian")
+    print("25. Finnish")
+    
+    choice = input("Enter the number corresponding to your choice: ")
+    
+    languages = {
+        "1": "es",   # Spanish
+        "2": "fr",   # French
+        "3": "de",   # German
+        "4": "it",   # Italian
+        "5": "pt",   # Portuguese
+        "6": "nl",   # Dutch
+        "7": "ru",   # Russian
+        "8": "ja",   # Japanese
+        "9": "zh-CN",# Chinese (Simplified)
+        "10": "ko",  # Korean
+        "11": "ar",  # Arabic
+        "12": "tr",  # Turkish
+        "13": "hi",  # Hindi
+        "14": "bn",  # Bengali
+        "15": "ur",  # Urdu
+        "16": "id",  # Indonesian
+        "17": "th",  # Thai
+        "18": "vi",  # Vietnamese
+        "19": "el",  # Greek
+        "20": "pl",  # Polish
+        "21": "ro",  # Romanian
+        "22": "sv",  # Swedish
+        "23": "cs",  # Czech
+        "24": "hu",  # Hungarian
+        "25": "fi",  # Finnish
+    }
+    
+    return languages.get(choice, "es")  # Default to Spanish if choice is invalid
+
+# Function to translate text and play audio
+def translate_and_play_audio(text, target_language):
+    translator = Translator()
+    translated_text = translator.translate(text, dest=target_language).text
+    
+    print("Translated text:", translated_text)
+    
+    # Save translated text as audio
+    tts = gTTS(text=translated_text, lang=target_language, slow=False)
+    tts.save("output.mp3")
+
+    # Play audio during execution
+    ipd.display(ipd.Audio("output.mp3"))
+
+# Prompt user to enter the text to be translated
+text = input("Enter the text to be translated: ")
+
+# Detect input language
+input_language = detect(text)
+
+# Translate only if input language is detected
+if input_language != 'en':
+    target_language = get_target_language()
+    translate_and_play_audio(text, target_language)
+else:
+    print("Input text is already in English. No translation needed.")
+
+
+  
