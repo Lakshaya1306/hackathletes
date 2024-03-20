@@ -1,9 +1,9 @@
+
 # Lingua - Your Multilingual AI Companion
 
 Welcome to Lingua, your trusted multilingual AI companion revolutionizing the way you communicate and connect across languages.
 
-![WhatsApp Image 2024-03-20 at 20 42 54_1e8d3ab5](https://github.com/Lakshaya1306/hackathletes/assets/151565236/d9e67317-7109-4411-a65f-fc20c6ba52be)
-
+![WhatsApp Image 2024-03-20 at 20 42 54_b5225a9c](https://github.com/Lakshaya1306/hackathletes/assets/151565236/5218eca3-1405-4712-b1e6-55ec24e4117c)
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ Welcome to Lingua, your trusted multilingual AI companion revolutionizing the wa
 - [Key Features](#key-features)
 - [Why Lingua?](#why-lingua)
 - [Concept Video](#concept-video)
-
+- [Contributing](#contributing)
 
 ## Introduction
 
@@ -31,7 +31,20 @@ Lingua is an innovative language translation and learning platform powered by ad
 - **Effortless Communication**: Streamline cross-cultural communication and collaboration with seamless translation.
 - **Empowering Language Mastery**: Navigate linguistic diversity with confidence, unlocking new opportunities for growth.
 
+
 ## Concept Video
+
 Check out our concept video to see Lingua in action:
 
-Using Lingua for Language Learning
+1. [Using Lingua for Language Learning](https://youtu.be/xOfwuE9yK1k)
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to Lingua, please follow these steps:
+
+1. Fork the repository and create your branch (`git checkout -b feature/your-feature`).
+2. Commit your changes (`git commit -am 'Add your feature'`).
+3. Push to your branch (`git push origin feature/your-feature`).
+4. Open a pull request detailing your changes.
+
+Please ensure your code follows the project's coding style and includes relevant tests.
