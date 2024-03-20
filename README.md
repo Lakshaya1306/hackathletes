@@ -2,7 +2,8 @@
 
 Welcome to Lingua, your trusted multilingual AI companion revolutionizing the way you communicate and connect across languages.
 
-![Lingua Logo](lingua_logo.png)
+![WhatsApp Image 2024-03-20 at 20 42 54_1e8d3ab5](https://github.com/Lakshaya1306/hackathletes/assets/151565236/d9e67317-7109-4411-a65f-fc20c6ba52be)
+
 
 ## Table of Contents
 
