@@ -10,6 +10,7 @@ Welcome to Lingua, your trusted multilingual AI companion revolutionizing the wa
 - [Introduction](#introduction)
 - [Key Features](#key-features)
 - [Why Lingua?](#why-lingua)
+- [Concept Video](#concept-video)
 
 
 ## Introduction
@@ -29,3 +30,8 @@ Lingua is an innovative language translation and learning platform powered by ad
 - **Global Connectivity**: Break down language barriers and connect with people from around the world.
 - **Effortless Communication**: Streamline cross-cultural communication and collaboration with seamless translation.
 - **Empowering Language Mastery**: Navigate linguistic diversity with confidence, unlocking new opportunities for growth.
+
+## Concept Video
+Check out our concept video to see Lingua in action:
+
+Using Lingua for Language Learning
